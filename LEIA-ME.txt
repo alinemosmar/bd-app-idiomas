@@ -1,0 +1,49 @@
+Aline Osmar  | 00287711
+André Carini | 00260843
+
+
+EREINF01145 B - Fundamentos de Banco de Dados (Renata Galante)
+
+Trabalho Final - Parte 2
+Implementação em Python das consultas ao banco de dados.
+
+Aplicativo de aprendizagem de idiomas Duolingo.
+
+
+Dependências:
+  -> Python 3
+  -> xterm
+  -> imagemagick
+  -> lsix (bash script, incluso no diretório, em ./lsix)
+    -> Permissões de execução são necessárias (chmod +x ./lsix)
+  -> psycopg2 (pip3 install psycopg2-binary)
+    É o driver de acesso ao PostgreSQL para Python.
+  -> prettytable (pip3 install prettytable)
+    Auxiliar para formatação de output do terminal em tabelas.
+  -> PostgreSQL 13
+    -> Database  'duolingo'
+    -> Usuário   'duolingo'
+    -> Senha     'duolingo'
+    -> Endereço  'localhost'
+    -> Porta     '5432'
+    -> Permissão SUPERUSER (para pg_read_binary_file)
+  -> Arquivos de inserção (imagens e áudio) no ./imagens_e_audios/ devem ser
+     copiados para a pasta $PGDATA/Duolingo. Para identificar qual é a pasta
+     $PGDATA, rode o comando 'SHOW data_directory' pelo psql usando um user
+     com permissão SUPERUSER.
+
+
+Como utilizar:
+  Primeiro, carregue no PostgreSQL o arquivo definitions.sql
+  e então o arquivo insertions.sql.
+  No terminal, execute:
+    xterm -ti vt340 -fa 'Monospace' -fs 14
+  E então, navegue até a pasta com o código e execute:
+    python3 codigo.py
+
+
+
+
+
+As consultas cumprem os requisitos do enunciado do trabalho:
+  Ver tabela na imagem "Requisitos cumpridos.png"
